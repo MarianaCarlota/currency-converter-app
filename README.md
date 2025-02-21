@@ -1,50 +1,38 @@
-# React + TypeScript + Vite
+# Currency converter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A currency converter app that allows users to easily convert values between multiple currencies using real-time exchange rates fetched from the Uphold API. The landing page features an input field where users can enter a value to convert, and below the input, the app displays the corresponding exchange rates to various other currencies. Additionally, users can select the base currency from which the conversion will occur.
 
-Currently, two official plugins are available:
+![Landing page](./assets/app-screenshot.png)
+![Landing page with conversions](./assets/app-screenshot-2.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Technologies Used
+React | TypeScript | Styled Components | SDK | React Router | Jest
 
-## Expanding the ESLint configuration
+### Installation
+1. Clone this repository o a file of your choice:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```
+git clone https://github.com/your-username/currency-converter-app.git
+cd currency-converter
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+2. Install dependencies:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+````
+npm install
+````
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+3. Open browser:
+
+````
+http://localhost:5173
+````
+
+### Testing 
+
+The project uses Jest for testing and React Testing Library for component testing.
+To run the tests:
+
+```
+npm test
 ```
